@@ -7,7 +7,7 @@ This script is not intended to run outside of ArcGIS and is packaged with a tool
 
 ## Parameters/Usage
 
-* __Input layer__ contains the individual features to export images around
+* __Input layer__ contains the individual features to export images around. Features must be polygons or lines.
 * __Unique field__ is a text field within __Input layer__ that contains unique values for each feature. These values will be used for output filenames.
 * __Output directory__ is the location where images will be stored.
 * __Fill type__ determines how each feature fills the data frame when exported. If set to `fill`, each feature will be scaled to use the largest width and height possible within the data frame, subject to the value of __Extent scaling__; output images will have the same dimensions but the data frame containing the features may vary in scale. Use the `proportional` setting to calculate the smallest scale across all features, subject to __Extent scaling__, and apply that scale across all exported images. Default: `fill`
