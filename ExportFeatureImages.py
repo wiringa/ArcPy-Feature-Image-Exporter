@@ -130,7 +130,7 @@ if len(maybeUniqueFilenames) != len(set(maybeUniqueFilenames)):
 for key, f in enumerate(exportFeatures):
     print f["uq"]
 
-    arcpy.mapping.Layer(inputLayer).definitionQuery = defQueryPrefix + "CTY_NAME = '" + f['uq'] + "'"
+    arcpy.mapping.Layer(inputLayer).definitionQuery = defQueryPrefix + uniqueField + " = '" + f['uq'] + "'"
 
     exportFeatures[key]['featureExtentFill'] = arcpy.Extent(
         XMin=f['XMin'] - ((f['XMax'] - f['XMin']) * (extentScale / 100 - 1) / 2),
@@ -159,7 +159,7 @@ if outputFillType == 'proportional':
     arcpy.AddMessage("Exporting with fixed scale of 1:" + str(outputScaleMin))
 
     for key, f in enumerate(exportFeatures):
-        arcpy.mapping.Layer(inputLayer).definitionQuery = defQueryPrefix + "CTY_NAME = '" + f['uq'] + "'"
+        arcpy.mapping.Layer(inputLayer).definitionQuery = defQueryPrefix + uniqueField + " = '" + f['uq'] + "'"
         df.extent = exportFeatures[key]['featureExtentFill']
         df.scale = outputScaleMin
         exportImage(outputFormat, mxd, outputDir, f['uqFilename'],
