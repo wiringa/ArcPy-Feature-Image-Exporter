@@ -14,7 +14,7 @@ This script is not intended to run outside of ArcGIS and is packaged with a tool
 * __Extent scaling__ is the percentage each extent is scaled within the data frame. A value of more than 100 scales up the dimensions of the extent, having the effect of reducing the feature size (smaller scale output). This is useful when padding within images is desirable, especially if line symbolization overflows the data frame and image when set to 100. Default: `100`
 * __DPI__ is the standard dots per inch to use when exporting. Multiply DPI times the height and width of the page size to get the output image size, (e.g., 72DPI on a 16"x9" will produce an 1152x648 image). Default: `96`
 * __Image type__ is one of `PNG` or `JPEG`. Default: `PNG`
-* __JPEG quality__ is set between `0` and `100` when __Image type__ is `JPEG`. Default value in `60`, common for save-for-web situations.
+* __JPEG quality__ is set between `0` and `100` when __Image type__ is `JPEG`. Default: `60`
 
 ## General Process for Use
 
