@@ -1,9 +1,6 @@
 # ArcPy Feature Image Exporter
 
-Export images from layouts in ArcGIS for Desktop as JPEGs or PNGs, one
-per feature based on a unique field in a single layer. Single layer uniqueness supported, but may be used with multiple layers and data frames.
-
-This script is not intended to run outside of ArcGIS and is packaged with a toolbox.
+Export images from layouts in ArcGIS for Desktop as JPEGs or PNGs, one per feature based on a unique field in a single layer. Single layer uniqueness supported, but may be used with multiple layers and data frames.
 
 ## Parameters/Usage
 
@@ -55,4 +52,5 @@ ArcGIS for Desktop 10.3.1. Other versions are untested. No extensions required.
 * Only unique fields of type text are supported.
 * Clipping the data frame to a shape produces errors which require restarting ArcGIS for Desktop.
 * Filename uniqueness support is not fully functional. If `arcpy.env.overwriteOutput=True`, files may be overwritten. If `False`, warnings will be produced in the case of non-unique filenames (or, if files of the same name already exist).
+* All work and testing was done within the ArcGIS for Desktop Python console. Does it work outside of ArcGIS for Desktop? Maybe.
 
